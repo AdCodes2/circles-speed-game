@@ -29,6 +29,7 @@ body {
 	margin: 10px;
 	transition: 0.05s;
 	animation: slide-in 0.7s backwards;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .circlesDiv {	

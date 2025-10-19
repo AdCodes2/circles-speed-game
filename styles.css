@@ -1,0 +1,138 @@
+body {
+	margin: 0;
+	background: #F3F3F3;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	flex-direction: column;
+}
+
+@keyframes slide-in {
+	from {
+		opacity: 0;
+		transform: scale(0.1);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+
+.circle {
+	height: 90px;
+	width: 90px;
+	background-color: white;
+	border-radius: 100px;	
+	margin: 10px;
+	transition: 0.05s;
+	animation: slide-in 0.7s backwards;
+}
+
+.circlesDiv {	
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	width: 330px;
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: translate(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.zoomIn {
+    animation: zoomIn 0.3s;
+} 
+
+.ScoreDisplay {
+	margin-bottom: 8px;
+	font-size: 110px;
+	font-family: sans-serif;
+	color: #2e5;
+	font-weight: bold;
+    transition: 0.3s;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.ScoreDisplay.hidden {
+	opacity: 0;
+}
+
+.start {
+	background-color: white;
+	color: white;
+	font-size: 40px;
+	width: 310px;
+	font-family: sans-serif;
+	border-radius: 60px;
+	margin-top: 30px;
+	transition: 0.2s;
+	text-align: center;
+	overflow: hidden;
+	height: 65px;
+	animation: slide-in 0.78s cubic-bezier(0.42, 0, 0.34, 1.32) 0.9s backwards;
+	font-weight: bold;
+}
+
+.circlesDiv :nth-child(1) {
+	animation-delay: 0;
+}
+.circlesDiv :nth-child(2) {
+		animation-delay: 0.1s;
+}
+.circlesDiv :nth-child(3) {
+		animation-delay: 0.2s;
+}
+.circlesDiv :nth-child(4) {
+		animation-delay: 0.3s;
+}
+.circlesDiv :nth-child(5) {
+		animation-delay: 0.4s;
+}
+.circlesDiv :nth-child(6) {
+		animation-delay: 0.5s;
+}
+.circlesDiv :nth-child(7) {
+		animation-delay: 0.6s;
+}
+.circlesDiv :nth-child(8) {
+		animation-delay: 0.7s;
+}
+.circlesDiv :nth-child(9) {
+		animation-delay: 0.8s;
+}
+
+.progress {
+	background: rgb(252 174 48);
+	padding: 10px 0;
+	height: 100%;
+	box-sizing: border-box;
+	transition: 0.3s;
+}
+
+.progress .hidden {
+	display: none;	
+}
+
+.start:hover {
+	transform: scale(1.05);
+}
+
+.start:active {
+	transform: scale(1.2)
+}
+
+.selected {
+	background-color: #2e5
+}
